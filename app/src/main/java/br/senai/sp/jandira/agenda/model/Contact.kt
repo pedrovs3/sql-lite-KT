@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.sql.Blob
 import java.time.LocalDate
 
 @Entity(tableName = "tbl_contact")
@@ -14,19 +15,17 @@ class Contact {
     var nome = ""
     var email = ""
     var telefone = ""
-    var foto:Drawable? = null
-    @ColumnInfo(name = "data_nascimento") var dataNascimento:LocalDate? = null
-
+    var foto = ""
+    @ColumnInfo(name = "data_nascimento") var dataNascimento = ""
 }
 
-/*
-* @Entity(tableName = "tbl_contact")
-* data class Contato(
-*   @PrimaryKey(autoGenerate = true)var id:Int,
-*   var nome:String,
-*   var email:String,
-*   var telefone:String,
-*   foto:Drawable?,
-*   @ColumnInfo(name = "data_nascimento") var dataNascimento:LocalDate?
-* )
-* */
+
+//@Entity(tableName = "tbl_contact")
+//data class Contato(
+//  @PrimaryKey(autoGenerate = true)var id:Int,
+//  var nome:String,
+//  var email:String,
+//  var telefone:String,
+//  foto:Drawable?,
+//  @ColumnInfo(name = "data_nascimento") var dataNascimento:LocalDate?
+//)

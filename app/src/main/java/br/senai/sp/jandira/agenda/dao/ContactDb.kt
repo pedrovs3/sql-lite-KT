@@ -12,6 +12,7 @@ abstract class ContactDb: RoomDatabase() {
 
      abstract fun contactDao(): ContactDao
 
+     // Padrao singleton
      companion object {
           private lateinit var instance: ContactDb
 

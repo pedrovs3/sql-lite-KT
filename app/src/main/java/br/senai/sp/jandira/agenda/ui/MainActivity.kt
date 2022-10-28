@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.agenda.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import br.senai.sp.jandira.agenda.databinding.ActivityMainBinding
@@ -12,5 +13,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+        supportActionBar!!.hide()
+
+        binding.fbNewContact.setOnClickListener{
+            openRegister()
+        }
+    }
+
+    private fun openRegister() {
+        val openNewContactActivity = Intent(this, NewContactActivity::class.java)
+        startActivity(openNewContactActivity)
     }
 }
