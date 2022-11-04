@@ -92,13 +92,8 @@ class NewContactActivity : AppCompatActivity() {
     }
 
     private fun update() {
-        val contatoForm = getFormData()
-
-        contact.nome = contatoForm.nome
-        contact.email = contatoForm.email
-        contact.telefone = contatoForm.telefone
-        contact.dataNascimento = contatoForm.dataNascimento
-        contact.foto = contatoForm.nome
+        contact = getFormData()
+        contact.id = id
 
         repository.update(contact)
         finish()
